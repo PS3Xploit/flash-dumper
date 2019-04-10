@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<script src="ps3xploit_v20.js"></script>
+<script src="ps3xploit_v201.js"></script>
 <head>
 <meta charset="UTF-8">
-<title>PS3Xploit Team - PS3 NOR Flash Memory Dumper v2.0 - HDD Edition</title>
+<title>PS3Xploit Team - PS3 NOR Flash Memory Dumper v2.0.1 - HDD Edition</title>
 <script>
 function initROP()
 {
@@ -166,23 +166,23 @@ function triggerX()
 </head>
 	<body id="BodyID" bgcolor="#FFD097">
 	<div id="HeaderID" style="color:#CC2010">
-	<h1>PS3 NOR Flash Memory Dumper v2.0 - HDD Edition</h1>
+	<h1>PS3 NOR Flash Memory Dumper v2.0.1 - HDD Edition</h1>
 	<h4><font color="#000000">by PS3Xploit Team: </font></h2><b> W | esc0rtd3w | habib | bguerville</b></font><hr></h4>
-	<h4><font color="#000000">v2.0 Update crafted by: </font>bguerville <font color="#000000">(ROP, Javascript & Debugging) |</font> esc0rtd3w <font color="#000000">(Debugging & Testing)<hr></h4>
+	<h4><font color="#000000">v2.0.1 Update crafted by: </font>bguerville <font color="#000000">(ROP, Javascript & Debugging) |</font> esc0rtd3w <font color="#000000">(Debugging & Testing)<hr></h4>
 	<font color="#000000">Many thanks to xerpi for the userland memory leak exploit ps3 port, zecoxao & Joonie for their early & continued support, mysis for documenting vsh exports & plugins, the psdevwiki contributors of course, STLcardsWS for his long standing contribution & all ps3 community hackers/devs past & present, you know who you are...<br>Thanks as well to littlebalup for providing the idea & the related javascript used to make this HDD edition.<hr>
 	<font color="#CC2010">
-	<h3>Supports OFW and CFW CEX Firmware versions 4.10 to 4.82<br>
-	Supports OFW and CFW DEX Firmware version 4.81<br>
+	<h3>Supports OFW/CFW/HFW CEX Firmware versions 4.10 to 4.84<br>
+	Supports OFW and CFW DEX Firmware versions 4.81/4.82/4.84<br>
 	Supports Phat Models Hxx/Jxx/Kxx/Lxx/Mxx/Pxx/Qxx<br>
 	Supports Slim Models 2xxx/3xxx<br>
 	Supports SuperSlim Models 4xxx [Excluding 4xxx-A]</h3>
 	</font>
-	Instructions/additional details & news on <a href="http://www.psx-place.com/forums/PS3Xploit">http://www.psx-place.com/forums/PS3Xploit</a><br></font>
+	Instructions/additional details & news on <a href="http://www.psx-place.com/forums/PS3Xploit">http://www.psx-place.com/forums/PS3Xploit</a><br><br>PS3Xploit Team Donations: <a href="https://www.paypal.me/ps3xploit">https://www.paypal.me/ps3xploit</a><br></font>
 	<hr>
 	</div>
 	<h2><b><u>Step</u> 1:</b></h2>
 	<p><b>Download the dump.jpg picture file to your PS3 internal HDD.</b></p>
-	<h3><b><a href="dump.jpg">Press &#x25B3 here</a> then: File &#x2192 Save Target &#x2192 System Storage(Photo)</b></h3>
+	<h3><b><a href="dump.jpg">Press <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAIAAAA2bnI+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjEuNv1OCegAAALISURBVDhPY/h/YToaOruxz8bGVkpcgpeHR1JM3MbGZv+ydjQ1QISic8fcmmB3SylxYS5ubl5uHiEVWR5eHm5ubnFRIW9Hk1WTSpEVI3R2lsXKSIpycnPzcHFz8HBzSAroLCrn01NkB5rBxQ00S1JMODfOG64eqnNKfSrQKqDxQMDFw80jyKdQG6F1Y7pCXSS3ED9QEGg1Dw8P0PKu8niEzhOrWmWlxCDagICTh1vc2Uj3RLf6ngbdw13CNjpAbUA7IUBaQvTUmg6ozsxoL6gwCHBxi/Cq9KXone4TsNNW396gOSOXS5AX6GA48HcxB+l8fmS2nLQ4VAwUMFyijrraJ3ulUl0FefmkU930z00Uj7AFSsAB0M1nN05g8PDwgPC5gH4BOktKSH19lcr8fD5ZMS4eXl45UfUVpTr72/j15Xm5gMEHBZaWlgzCwrCA4QbGH5dcgZ/W+T6JMBuIJcDQEnU3VL0yWbkqjI+PE8gFCXJxCQoKMoiIiIB4YHcKW6jqHulUW1TCJynCCwZ8QCTEp9CbpLOnRchMFRi+QJXAQAbpdHZ2BnIE+PnFpcW0J2YYn50s7mAoKCUuKCkuJAki+aXEJAxU9Xa3a0/IEJQSERIQAOo0NTVleHxwpoqirKSYmKyjoeGFqWbXZ1ruaLPY2Wa+q818d5vFrjazXW3WO9pNLk7VvzVbPsReUlxcTUnu5JouUKxUZYZJy8nqFUVYrGu0WtdgtqERiMzXN1qsB5FAZLq+0XJtg9m6Buu+fElFufwEX2h8Xtvaa26ir6KprqyFBaGJW5rqP9k/CaoTiOa2ZVmbG2niBRoaGrYWRiv6CyFaoDqBaO2UUmc7S11dXT1sACjubGexvC8frh6hE4hubOutz4t0d7Y1MjIyhgEg29PFtrkw5tb2XmTFKDohaNfCZisrK3NzcwsLCwi5eVYtmpr/F6YDAKT6XV0sp3K+AAAAAElFTkSuQmCC"> Here. File → Save Target → System Storage (Photo)</a></b></h3>
 	<p>The picture will serve as placeholder for the dump. It will be saved on the PS3 as : <b><span id="filePath"></span></b></p>
 	<h2><b><u>Step</u> 2:</b></h2>
 	<button id="btnROP" type="button" onclick="initROP();" autofocus>Initialize Exploit</button><span id="dex_txt" style="visibility:hidden"> DEX mode<input type="checkbox" id="dex" name="DEX" disabled="true" onclick="dex();"/></span>

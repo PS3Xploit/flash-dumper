@@ -105,10 +105,21 @@ var gadget6_addr_430=0x420A78;
 var gadget7_addr_430=0x623574;
 var gadget8_addr_430=0x2B3AA4;
 
+//DEX 4.31
+// var toc_addr_431 = 0x6F5310;
+// var gadget1_addr_431=0x0DEE70;
+// var gadget2_addr_431=0x09728C;
+// var gadget3_addr_431=0x611B68;
+// var gadget4_addr_431=0x1A2FD0;
+// var gadget5_addr_431=0x431258;
+// var gadget6_addr_431=0x428660;
+// var gadget7_addr_431=0x62AC68;
+// var gadget8_addr_431=0x2BB2C0;
+
 //CEX 4.31
 var toc_addr_431 = 0x6F5220;
 var gadget1_addr_431=0x0D95A0;
-var gadget2_addr_431=0x09728C;
+var gadget2_addr_431=0x097344;
 var gadget3_addr_431=0x609F5C;
 var gadget4_addr_431=0x19BF94;
 var gadget5_addr_431=0x429674;
@@ -192,6 +203,17 @@ var gadget5_addr_455=0x42C684;
 var gadget6_addr_455=0x423A8C;
 var gadget7_addr_455=0x626690;
 var gadget8_addr_455=0x2B7F4C;
+
+//DEX 4.60
+// var toc_addr_460 = 0x705E98;
+// var gadget1_addr_460=0x0DED30;
+// var gadget2_addr_460=0x09739C;
+// var gadget3_addr_460=0x618CB0;
+// var gadget4_addr_460=0x1A4108;
+// var gadget5_addr_460=0x435F5C;
+// var gadget6_addr_460=0x42D2FC;
+// var gadget7_addr_460=0x631DEC;
+// var gadget8_addr_460=0x2C0EA8;
 
 //CEX 4.60
 var toc_addr_460 = 0x6F5DA8;
@@ -302,6 +324,28 @@ var gadget5_addr_482=0x42C778;
 var gadget6_addr_482=0x423B18;
 var gadget7_addr_482=0x628594;
 var gadget8_addr_482=0x2BACB8;
+
+//CEX 4.83
+var toc_addr_483 = 0x6F5558;
+var gadget1_addr_483=0x0D9684;
+var gadget2_addr_483=0x097604;
+var gadget3_addr_483=0x60EFD8;
+var gadget4_addr_483=0x19D3B0;
+var gadget5_addr_483=0x42C778;
+var gadget6_addr_483=0x423B18;
+var gadget7_addr_483=0x628594;
+var gadget8_addr_483=0x2BACB8;
+
+//CEX 4.84
+var toc_addr_484 = 0x6F5558;
+var gadget1_addr_484=0x0D9684;
+var gadget2_addr_484=0x097604;
+var gadget3_addr_484=0x60EFD8;
+var gadget4_addr_484=0x19D3B0;
+var gadget5_addr_484=0x42C778;
+var gadget6_addr_484=0x423B18;
+var gadget7_addr_484=0x628594;
+var gadget8_addr_484=0x2BACB8;
 
 function asciiAt(str, i){
 	return str.charCodeAt(i)&0xFF;
@@ -743,10 +787,11 @@ function findJsVariableOffset(name,exploit_data,base,size)
 //####################################################################################################################################################################
 function ps3chk(){
 
-	var fwCompat = ["4.00","4.10","4.11","4.20","4.21","4.25","4.30","4.31","4.40","4.41","4.45","4.46","4.50","4.53","4.55","4.60","4.65","4.66","4.70","4.75","4.76","4.78","4.80","4.81","4.82"];
+	var fwCompat = ["4.00","4.10","4.11","4.20","4.21","4.25","4.30","4.31","4.40","4.41","4.45","4.46","4.50","4.53","4.55","4.60","4.65","4.66","4.70","4.75","4.76","4.78","4.80","4.81","4.82","4.83","4.84"];
 	var ua = navigator.userAgent;
 	var uaStringCheck = ua.substring(ua.indexOf("5.0 (") + 5, ua.indexOf(") Apple") - 7);
 	var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
+	var msgHFW = "ATTENTION!\n\nYour firmware version requires 4.84 HFW (Hybrid Firmware) to be installed, containing exploitable modules.";
 	var msgCongrats = "Congratulations! We've detected your PlayStation 3 is running FW " + fwVersion + ", which is compatible with PS3Xploit! Enjoy!";
 	resetOptions();	
 	switch (uaStringCheck) {
@@ -1078,8 +1123,34 @@ function ps3chk(){
 					gadget8_addr=gadget8_addr_482;
 					break;
 					
+				case fwCompat[25]:
+					alert(msgHFW);
+					toc_addr = toc_addr_483;
+					gadget1_addr=gadget1_addr_483;
+					gadget2_addr=gadget2_addr_483;
+					gadget3_addr=gadget3_addr_483;
+					gadget4_addr=gadget4_addr_483;
+					gadget5_addr=gadget5_addr_483;
+					gadget6_addr=gadget6_addr_483;
+					gadget7_addr=gadget7_addr_483;
+					gadget8_addr=gadget8_addr_483;
+					break;
+					
+				case fwCompat[26]:
+					alert(msgHFW);
+					toc_addr = toc_addr_484;
+					gadget1_addr=gadget1_addr_484;
+					gadget2_addr=gadget2_addr_484;
+					gadget3_addr=gadget3_addr_484;
+					gadget4_addr=gadget4_addr_484;
+					gadget5_addr=gadget5_addr_484;
+					gadget6_addr=gadget6_addr_484;
+					gadget7_addr=gadget7_addr_484;
+					gadget8_addr=gadget8_addr_484;
+					break;
+					
 				default:
-					alert("Your PS3 is not on FW 4.81 or 4.82! Your current running FW version is " + fwVersion + ", which is not compatible with PS3Xploit. All features have been disabled");
+					alert("Your PS3 is not on FW 4.10+! Your current running FW version is " + fwVersion + ", which is not compatible with PS3Xploit. All features have been disabled");
 					disable_btn();
 					disable_cb();
 					break;
